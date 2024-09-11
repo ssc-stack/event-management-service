@@ -21,7 +21,7 @@ public class Event extends AbstractEntity{
     @JoinColumn(nullable = false)
     private Organizer organizer;
     @JsonIgnore
-    @OneToMany(mappedBy = "event", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "event", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Set<Participant> participants;
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonIgnore
